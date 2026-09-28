@@ -1,0 +1,406 @@
+/* =================================
+   STYLE GÉNÉRAL
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f8fa;
+    color: #17324d;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   BARRE DE NAVIGATION
+================================= */
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.10);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* Logo + titre */
+
+.logo-titre {
+    display: flex;
+    align-items: center;
+    padding: 30px 10%;
+    gap: 30px;
+}
+
+.logo-titre img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.logo-titre h1 {
+    color: #006994;
+    font-size: 26px;
+}
+
+.logo-titre p {
+    color: #607d8b;
+    font-size: 14px;
+}
+
+
+/* Menu */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #87CEEB;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 16px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #004d70;
+}
+
+nav a.active {
+    background-color: #003f5c;
+}
+
+
+/* =================================
+   GRANDE IMAGE D'ACCUEIL
+================================= */
+
+.hero {
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+}
+
+.photo-accueil {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* Texte placé sur la photo */
+
+.hero-texte {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    background-color: rgba(0, 50, 75, 0.75);
+
+    color: white;
+
+    padding: 35px 50px;
+
+    border-radius: 12px;
+
+    width: 70%;
+    max-width: 800px;
+}
+
+.hero-texte h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero-texte p {
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+
+/* Bouton */
+
+.bouton {
+    display: inline-block;
+
+    background-color: #00a6c7;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.bouton:hover {
+    background-color: #007f9b;
+}
+
+
+/* =================================
+   PRÉSENTATION
+================================= */
+
+.presentation {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 25px;
+    text-align: center;
+}
+
+.presentation h2 {
+    color: #006994;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.presentation p {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+
+/* =================================
+   AXES DU PROJET
+================================= */
+
+.axes {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 25px;
+}
+
+.axes h2 {
+    text-align: center;
+    color: #006994;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+
+/* Conteneur des cartes */
+
+.cartes {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* Une carte */
+
+.carte {
+    background-color: white;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition: 0.3s;
+}
+
+.carte:hover {
+    transform: translateY(-5px);
+}
+
+.carte .icone {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.carte h3 {
+    color: #006994;
+    margin-bottom: 10px;
+}
+
+
+/* =================================
+   PIED DE PAGE
+================================= */
+
+footer {
+    margin-top: 70px;
+
+    background-color: #003f5c;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   VERSION TABLETTE / MOBILE
+================================= */
+
+@media screen and (max-width: 900px) {
+
+    .cartes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .logo-titre h1 {
+        font-size: 20px;
+    }
+
+    .logo-titre img {
+        width: 55px;
+        height: 55px;
+    }
+
+    nav a {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero-texte {
+        width: 90%;
+        padding: 25px 15px;
+    }
+
+    .hero-texte h2 {
+        font-size: 28px;
+    }
+
+    .hero-texte p {
+        font-size: 17px;
+    }
+
+    .cartes {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =================================
+   CENTRAGE DU CONTENU
+================================= */
+
+.contenu-section {
+    max-width: 1000px;
+    margin: 70px auto;
+    padding: 35px 45px;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+
+/* Les paragraphes */
+
+.contenu-section p {
+    max-width: 850px;
+    margin: 0 auto 18px;
+}
+
+
+/* =================================
+   EFFET AU SURVOL DES CARTES
+================================= */
+
+.carte {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+    cursor: pointer;
+}
+
+.carte:hover {
+    transform: translateY(-10px) scale(1.02);
+
+    box-shadow:
+        0 15px 30px rgba(0, 80, 120, 0.18);
+}
+
+
+/* =================================
+   EFFET SUR LES ÉTAPES
+================================= */
+
+.etape {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.etape:hover {
+    transform: translateX(8px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 80, 120, 0.15);
+}
+
+
+/* =================================
+   TITRES
+================================= */
+
+.contenu-section h2 {
+    position: relative;
+
+    display: inline-block;
+
+    margin-bottom: 35px;
+}
+
+
+/* Petite ligne sous les titres */
+
+.contenu-section h2::after {
+    content: "";
+
+    display: block;
+
+    width: 60px;
+    height: 4px;
+
+    background-color: #00a6c7;
+
+    margin: 10px auto 0;
+
+    border-radius: 5px;
+}
