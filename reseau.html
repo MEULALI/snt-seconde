@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>réseau</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#theme-n°1---internet">THEME N°1 :  Internet</a>
+<ul>
+<li><a href="#attention">Attention:</a></li>
+<li><a href="#le-protocole-tcpip">Le protocole TCP/IP</a></li>
+<li><a href="#remarqueadresse-ipv4-ou-ipv6-">Remarque:Adresse IPv4 ou IPv6 ?</a></li>
+<li><a href="#les-données-et-linformation">Les données et l’information</a></li>
+<li><a href="#les-algorithmes-et-les-programmes">Les algorithmes et les programmes</a></li>
+<li><a href="#partie-1--les-réseaux-lan-man-et-wan">Partie 1 : Les réseaux LAN, MAN et WAN</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="theme-n°1---internet"><strong>THEME N°1 :</strong>  Internet</h1>
+<h2 id="attention">Attention:</h2>
+<p>Cette partie est à travailler à la maison afin de préparer l’évaluation des connaissances au début de la séance 1.</p>
+<p>Que se passe-t-il lorsque vous tapez dans la barre d’adresse de votre navigateur «<a href="http://www.google.fr">http://www.google.fr</a>» ? Votre ordinateur va chercher à entrer en communication avec un autre ordinateur se trouvant probablement à des milliers de kilomètres de chez vous. Pour pouvoir établir cette communication, il faut bien sûr que les 2 ordinateurs soient « reliés ». On dira que nos 2 ordinateurs sont en réseau. Il existe énormément de réseaux (la plupart des ordinateurs du lycée sont en « réseau »), certains réseaux sont reliés à d’autres réseaux qui sont eux-mêmes reliés à d’autres réseaux… ce qui forme « des réseaux de réseaux de réseaux…». Savez-vous comment on appelle cet assemblage multiple de réseaux ?  <em>Internet !</em></p>
+<p><a href="http://sciences-ingenieur.genevoix-signoret-vinci.fr/SNT/1-internet/res/Internet1.png" title="zoomer sur cette image"><img src="http://sciences-ingenieur.genevoix-signoret-vinci.fr/SNT/1-internet/res/Internet1_1.png" alt=""></a></p>
+<p>Modèle d’Internet simplifié</p>
+<p>Internet est un  <em>réseau inter connecté</em>  (_Inter Net_work).</p>
+<p>Grâce à sa souplesse et à son universalité, Il est devenu le moyen de communication principal entre les hommes et avec les machines.</p>
+<p><img src="http://sciences-ingenieur.genevoix-signoret-vinci.fr/SNT/1-internet/res/hotline.jpg" alt=""></p>
+<h2 id="le-protocole-tcpip">Le protocole TCP/IP</h2>
+<p>Internet est défini par le  <em>protocole IP</em>  (<em>Internet Protocol</em>), ensemble de normes qui permettent d’identifier et de nommer de façon uniforme tous les ordinateurs ou objets qui lui sont connectés.</p>
+<p>Afin de pouvoir s’identifier, tout ordinateur possède une adresse sur un réseau : son  <em>adresse IP.</em></p>
+<p>Une adresse IP est de la forme “<em>74.125.133.94</em>” (cette adresse IP correspond au serveur de google “<a href="http://google.com">google.com</a>”)</p>
+<p>Les adresses IP sont de la forme : “a.b.c.d”, avec a, b, c et d compris entre 0 et 255.</p>
+<h2 id="remarqueadresse-ipv4-ou-ipv6-">Remarque:Adresse IPv4 ou IPv6 ?</h2>
+<p>Une autre norme est en train d’être déployée, la norme IPV6 (alors que les adresses IP vues ci-dessus appartiennent à la norme IPV4). Pourquoi cette nouvelle norme ? Parce qu’ avec le système IPV4, il risque, dans les prochaines années, de manquer d’adresses IP disponibles sur internet (la norme IPv4 ne fournit qu’environ 4 milliards d’adresses).</p>
+<p>Une adresse IPv6, bénéficiant d’une écriture hexadécimale, est de la forme :  <em>2001:0db8:0000:85a3:0000:0000:ac1f:8001</em>  (environ 3,4×10³⁸ adresses possibles)</p>
+<p><a href="http://sciences-ingenieur.genevoix-signoret-vinci.fr/SNT/1-internet/res/adressageIP.jpg" title="zoomer sur cette image"><img src="http://sciences-ingenieur.genevoix-signoret-vinci.fr/SNT/1-internet/res/adressageIP_1.jpg" alt=""></a></p>
+<p>Adressage IP : similitude avec le courrier postal, chaque ordinateur du réseau possède sa propre adresse</p>
+<p>IP est accompagné de protocoles de transmission pour transférer l’information par paquets, le principal étant  <em>TCP/IP</em>  (<em>Transmission Control Protocol</em>).</p>
+<p><a href="http://sciences-ingenieur.genevoix-signoret-vinci.fr/SNT/1-internet/res/TCP-Paquets.jpg" title="zoomer sur cette image"><img src="http://sciences-ingenieur.genevoix-signoret-vinci.fr/SNT/1-internet/res/TCP-Paquets_1.jpg" alt=""></a></p>
+<p>Transmission des données sur Internet par paquets</p>
+<p>De nature logicielle, internet s’appuie sur une grande variété de réseaux physiques où IP est implémenté. Il uniformise l’accès à tous les ordinateurs, les téléphones et les objets connectés.</p>
+<p><a href="http://sciences-ingenieur.genevoix-signoret-vinci.fr/SNT/1-internet/res/reseau_domestique.jpg" title="zoomer sur cette image"><img src="http://sciences-ingenieur.genevoix-signoret-vinci.fr/SNT/1-internet/res/reseau_domestique_1.jpg" alt=""></a></p>
+<h2 id="les-données-et-linformation">Les données et l’information</h2>
+<p>Internet manipule deux types d’information : les contenus envoyés et les adresses du destinataire et de l’émetteur.</p>
+<p>Ces deux types d’information sont regroupés dans des paquets de taille fixe, de façon uniforme et indépendante du type de données transportées : texte, images, sons, vidéos, etc.</p>
+<p>Les adresses sont numériques et hiérarchiques mais l’utilisateur connaît surtout des adresses symboliques normalisées, comme <a href="http://wikipedia.fr">wikipedia.fr</a>.</p>
+<p><a href="http://sciences-ingenieur.genevoix-signoret-vinci.fr/SNT/1-internet/res/definition-DNS.jpg" title="zoomer sur cette image"><img src="http://sciences-ingenieur.genevoix-signoret-vinci.fr/SNT/1-internet/res/definition-DNS_1.jpg" alt=""></a></p>
+<p>Le système  <em>DNS</em>  (<em>Domain Name System</em>) transforme une adresse symbolique en adresse numérique.</p>
+<p>Il est réalisé par un grand nombre d’ordinateurs répartis sur le réseau et constamment mis à jour.</p>
+<h2 id="les-algorithmes-et-les-programmes">Les algorithmes et les programmes</h2>
+<p>Le principal algorithme d’internet est le routage des paquets de leurs émetteurs vers leurs destinataires. Il est effectué par des machines appelées routeurs, qui échangent en permanence avec leurs voisins pour établir une carte locale de ce qu’ils voient du réseau. Chaque paquet transite par une série de routeurs, chacun l’envoyant à un autre routeur selon sa carte locale et la destination prévue. Les routeurs s’ajustent en permanence et de proche en proche quand on les ajoute au réseau ou quand un routeur voisin disparaît. Il n’y a plus besoin de carte globale, ce qui permet le routage à grande échelle.</p>
+<p>Similitude entre la distribution du courrier postal et le transfert des données sur Internet</p>
+<p>Lors du routage, un paquet peut ne pas arriver pour deux raisons : une panne matérielle d’une ligne ou d’un routeur, ou sa destruction. Chaque paquet contient l’information d’un nombre maximal de routeurs à traverser : pour ne pas encombrer le réseau, il est détruit si ce nombre est atteint. C’est le protocole TCP qui fiabilise la communication en redemandant les paquets manquants. Il garantit que tout paquet finira par arriver, sauf panne matérielle incontournable. TCP réordonne aussi les paquets arrivés dans le désordre et diminue la congestion du réseau en gérant au mieux les redemandes. Mais ni internet ni TCP ne possèdent de garantie temporelle d’arrivée des paquets, ce qui nuit à la qualité du streaming du son ou des vidéos et de la téléconférence. En effet, dans une vidéo, on peut perdre une image isolée, mais pas le fil du temps.</p>
+<p>D’autres protocoles s’appuient sur ceux d’internet, par exemple les protocoles du Web (HTTP et HTTPS) et le protocole NTP (Network Time Protocol) qui permet de synchroniser finement les heures des ordinateurs et objets connectés.</p>
+<h3 id="les-machines">Les machines</h3>
+<p>Réseau mondial, internet fonctionne à l’aide de routeurs, de lignes de transmissions à très hauts débits (fibres optiques) entre routeurs, de réseaux de téléphonie mobile, et de réseaux locaux. Ses protocoles étant logiciels, il peut s’appuyer sur n’importe quel réseau physique qui les implémente : 4G, Ethernet, ADSL, Wi-Fi, Bluetooth, etc. TCP/IP n’est pas implémenté dans l’infrastructure, mais dans chacun des ordinateurs connectés, et un serveur DNS est aussi un ordinateur connecté. Des mécanismes complexes assurent la continuité de la connexion, par exemple pour passer sans interruption de téléphonie 4G au Wi-Fi, ou son ubiquité, par exemple pour passer de façon invisible d’antenne à antenne avec un téléphone portable quand on voyage.</p>
+<p>Dans les réseaux pair-à-pair s’appuyant sur internet et souvent utilisé pour le transport de vidéos, chaque ordinateur sert à la fois d’émetteur et de récepteur.</p>
+<h3 id="impacts-sur-les-pratiques-humaines">Impacts sur les pratiques humaines</h3>
+<p>Internet a fait progressivement disparaître beaucoup des moyens de communication précédents : télégramme, télex, le courrier postal pour une bonne partie, et bientôt le téléphone fixe grâce à VoIP (voix sur IP). Son trafic prévu pour 2021 est de  <em>3 300 milliards de milliards d’octets</em>  (3,3 × 1021 octets).</p>
+<p>Internet a aussi ses problèmes : absence de garantie temporelle sur l’arrivée des paquets et possibilité d’attaques par saturation en envoyant un très grand nombre de messages à un site donné, pour y provoquer un déni de service.</p>
+<p>La neutralité du Net, présente dès l’origine du réseau, exprime l’idée que les routeurs doivent transmettre les paquets indépendamment du type de leur contenu : texte, vidéo, etc. Mais elle est constamment remise en cause par certains lobbies industriels.</p>
+<h2 id="partie-1--les-réseaux-lan-man-et-wan">Partie 1 : Les réseaux LAN, MAN et WAN</h2>
+<p>Visualiser la vidéo suivante :<br>
+<a href="http://sciences-ingenieur.genevoix-signoret-vinci.fr/SNT/1-internet/res/Les_reseaux_informatiques_et_Internet.mp4">réseau LAN MAN WAN</a><br>
+Les différents types de réseaux</p>
+<h3 id="définitionrésumé-des-types-de-réseaux">Définition:Résumé des types de réseaux</h3>
+<ul>
+<li>
+<p><em>LAN</em>  (_L_ocal  _A_rea  _N_etwork ou Réseau Local) : réseau local permettant de relier des ordinateurs et des périphériques situés à proximité les uns des autres.</p>
+</li>
+<li>
+<p><em>MAN</em>  (_M_etropolitan  _A_rea  _N_etwork ou Réseau Métropolitain) : série de réseaux locaux permettant de relier plusieurs LAN géographiquement à proximité.</p>
+</li>
+<li>
+<p><em>WAN</em>  (_W_ide  _A_rea  _N_etwork ou Réseau Etendu) : réseau étendu couvrant des vastes zones géographiques à l’échelle d’un pays ou d’un continent par exemple.</p>
+</li>
+</ul>
+
+    </div>
+  </div>
+</body>
+
+</html>
