@@ -1,3 +1,61 @@
+/* =====================================================
+   AFFICHAGE MOBILE
+   ===================================================== */
+
+/* Empêcher le zoom non désiré sur iPhone (évite zoom au focus) */
+html { -webkit-text-size-adjust: 100%; }
+
+@media (max-width: 800px) {
+
+    body.stackedit {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .stackedit__left {
+        width: 100%;
+        position: static;
+    }
+
+    .stackedit__toc {
+        max-height: 200px;    /* sommaire pliable, pas trop haut */
+    }
+
+    .stackidit__html,
+    .stackedit__html {
+        padding: 18px;
+    }
+
+    /* Titres moins énormes */
+    h1 { font-size: 24px; padding: 10px 14px; }
+    h2 { font-size: 20px; }
+    h3 { font-size: 17px; }
+
+    /* Texte plus lisible */
+    p, li { font-size: 15px; text-align: left; }
+
+    /* Code lisible sans casser la page */
+    pre {
+        font-size: 13px;
+        padding: 12px;
+        border-radius: 4px;
+    }
+
+    /* Mots longs qui se coupent proprement */
+    p, li, a { overflow-wrap: break-word; }
+
+    /* La lettrine fait joli sur PC, gêne sur mobile : on l'enlève */
+    h1 + p::first-letter,
+    h2 + p::first-letter {
+        float: none;
+        font-size: 1em;
+        color: inherit;
+        margin: 0;
+    }
+
+    /* Images toujours à la largeur de l'écran */
+    img { width: 100%; }
+}
 /* =================================
    STYLE GÉNÉRAL
 ================================= */
