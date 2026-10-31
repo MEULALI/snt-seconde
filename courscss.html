@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>courscss</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#css">CSS</a>
+<ul>
+<li><a href="#principe">Principe</a></li>
+<li><a href="#exemple--css-zen-garden">Exemple : CSS Zen Garden</a></li>
+<li><a href="#insérer-du-css-dans-une-page">Insérer du CSS dans une page</a></li>
+<li><a href="#syntaxe-et-sélecteurs">Syntaxe et sélecteurs</a></li>
+<li><a href="#exercices">Exercices</a>
+<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="css">CSS</h1>
+<p><code>"Définition" **CSS** = **Cascading Style Sheets** = Feuilles de style en cascade : séquence d’instructions de rendu visuel, auditif ou tactile d’une ressource HTML ou XML</code></p>
+<h2 id="principe">Principe</h2>
+<p>Le CSS est un langage informatique qui permet de décrire la présentation d’un document écrit en HTML ou XML (y compris les dialectes XML comme SVG, MathML ou XHTML).</p>
+<p>Enjeux :</p>
+<ul>
+<li><strong>séparation entre la structure &amp; la présentation</strong></li>
+<li>présentation selon le media (print / screen / tv…)</li>
+<li>cascade des styles : combinaison de différentes sources de style</li>
+</ul>
+<h2 id="exemple--css-zen-garden">Exemple : CSS Zen Garden</h2>
+<p>Le projet CSS Zen Garden a été lancé en 2003 par Dave Shea. Il s’agit d’un projet qui met en avant la puissance du CSS en permettant aux designers de créer des mises en page uniques et créatives en utilisant le même contenu HTML. Le site présente une série de designs réalisés par des designers du monde entier, <strong>tous basés sur le même fichier HTML.</strong></p>
+<p>Lien : <a href="https://www.csszengarden.com/">CSS Zen Garden</a></p>
+<p>La page HTML sans aucune feuille de style :</p>
+<p><img src="https://diu-htmlcss-1858e2.forge.apps.education.fr/2-css/images/zen-wo-style.png" alt="CSS Zen Garden - sans css"></p>
+<p>CSS Zen Garden - sans css</p>
+<p>Différentes mises en page réalisées par des designers :</p>
+<p><img src="https://diu-htmlcss-1858e2.forge.apps.education.fr/2-css/images/zen-w-style.png" alt="CSS Zen Garden - avec css"></p>
+<p>CSS Zen Garden - avec css</p>
+<h2 id="insérer-du-css-dans-une-page">Insérer du CSS dans une page</h2>
+<p>Il existe <strong>trois façons</strong> d’associer du CSS à un document HTML :</p>
+<h3 id="feuille-de-style-externe-recommandé">1. Feuille de style externe (recommandé)</h3>
+<p>Le CSS est écrit dans un <strong>fichier séparé</strong> (par exemple <code>style.css</code>), relié à la page depuis le <code>&lt;head&gt;</code> avec la balise <code>&lt;link&gt;</code> :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>style.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>C’est la méthode à privilégier : un même fichier peut mettre en forme <strong>plusieurs pages</strong>, et le fond (HTML) reste bien séparé de la forme (CSS).</p>
+<h3 id="feuille-de-style-interne">2. Feuille de style interne</h3>
+<p>Le CSS est écrit dans une balise <code>&lt;style&gt;</code>, placée dans le <code>&lt;head&gt;</code> de la page. Pratique pour une page unique ou un essai rapide :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style language-css">
+    <span class="token selector">h1 </span><span class="token punctuation">{</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h3 id="style-en-ligne-inline">3. Style en ligne (<em>inline</em>)</h3>
+<p>Le CSS est écrit <strong>directement sur la balise</strong>, via l’attribut <code>style</code> :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Titre<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>Attention</p>
+<p>Le style <em>inline</em> est à <strong>éviter</strong> : il mélange le fond et la forme, n’est pas réutilisable, et est difficile à maintenir. On le réserve à des cas très ponctuels.</p>
+<h2 id="syntaxe-et-sélecteurs">Syntaxe et sélecteurs</h2>
+<p>Références : <a href="https://developer.mozilla.org/fr/docs/Web/CSS">MDN</a> Sélecteurs : <a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_selectors">MDC CSS Selectors</a></p>
+<h3 id="syntaxe">Syntaxe</h3>
+<p>Le CSS associe des <strong>règles de représentation</strong> à des éléments sélectionnés dans le document HTML. Une règle de représentation est composée d’un ou plusieurs <strong>sélecteurs</strong> et d’une <strong>déclaration</strong> qui elle-même est composée d’une ou plusieurs <strong>propriétés</strong> et de leur <strong>valeur</strong>.</p>
+<p>Les propriétés sont tout ce qui peut être appliqué à un élément : couleur, taille, marge, police, etc.</p>
+<p><img src="https://diu-htmlcss-1858e2.forge.apps.education.fr/2-css/images/css-properties.png" alt="Illustration CSS properties"></p>
+<p>Illustration CSS properties</p>
+<p>Exemple de structure :</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector">selecteur1 </span><span class="token punctuation">{</span>
+  <span class="token property">propriete</span><span class="token punctuation">:</span> valeur<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">selecteur2,
+selecteur3 </span><span class="token punctuation">{</span>
+  <span class="token property">propriete</span><span class="token punctuation">:</span> valeur<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Chaque déclaration se termine par un <strong>point-virgule</strong> <code>;</code>, et le bloc de déclarations est délimité par des <strong>accolades</strong> <code>{ }</code>. On peut placer un même ensemble de propriétés sur <strong>plusieurs sélecteurs</strong> en les séparant par des virgules (<code>selecteur2, selecteur3</code>).</p>
+<p>On peut commenter le CSS avec <code>/* ... */</code> (il n’existe pas de commentaire sur une seule ligne <code>//</code> en CSS) :</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token comment">/* Ceci est un commentaire CSS */</span>
+<span class="token selector">h1 </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token comment">/* couleur du titre */</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="sélecteurs">Sélecteurs</h3>
+<p>Un <strong>sélecteur</strong> désigne les éléments du document auxquels une règle s’applique. On peut cibler les éléments par leur type (la balise), leur position dans l’arbre, leur classe, leur identifiant, leurs attributs, ou leur état (pseudo-classes).</p>
+<h4 id="sélecteurs-simples-hiérarchie">Sélecteurs simples, hiérarchie</h4>
+<ol>
+<li><code>li</code> == sélectionne toutes les balises li du document</li>
+<li><code>article li</code> == sélectionne toutes les balises li qui sont des descendants (pas forcément directs) d’un article</li>
+<li><code>article &gt; ul</code> == sélectionne tous les ul qui sont enfant direct d’un article</li>
+<li><code>article &gt; ul &gt; li</code> == sélectionne tous les enfants direct d’un ul descendant direct d’un article</li>
+<li><code>h1 + p</code> == sélectionne toutes les balises p qui suivent immédiatement un h1</li>
+<li><code>h1 ~ p</code> == sélectionne toutes les balises p qui suivent (immédiatement ou non) un h1 et qui ont le même parent</li>
+</ol>
+<p>Exemple :</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector">li </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">article li </span><span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">article &gt; ul </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">article &gt; ul &gt; li </span><span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">3</span>px solid green<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">h1 + p </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">h1 ~ p </span><span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">3</span>px solid purple<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img src="https://diu-htmlcss-1858e2.forge.apps.education.fr/2-css/images/tree-css-simple.png" alt="Sélecteur simples &amp; hiérarchie"></p>
+<p>Sélecteur simples &amp; hiérarchie</p>
+<h4 id="sélecteur-de-classe-d’id-et-d’attribut">Sélecteur de classe, d’id et d’attribut</h4>
+<ul>
+<li><code>.rouge</code> == sélectionne toutes les balises ayant la classe “rouge”</li>
+<li><code>h1.rouge</code> == sélectionne toutes les balises h1 ayant la classe rouge</li>
+<li><code>#article-1</code> == sélectionne toutes (=LA) balise ayant l’id article-1</li>
+<li><code>img[alt='Pingouin']</code> == sélectionne toutes les balises img ayant un attribut alt égal à Pingouin</li>
+</ul>
+<p>Plusieurs variantes pour le sélecteur d’attribut : <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Attribute_selectors">MDN CSS Attribute selectors</a> :</p>
+<ul>
+<li><code>attr$=valeur</code> : sélectionne les éléments dont l’attribut se termine par valeur</li>
+<li><code>attr^=valeur</code> : sélectionne les éléments dont l’attribut commence par valeur</li>
+<li><code>attr*=valeur</code> : sélectionne les éléments dont l’attribut contient valeur</li>
+<li><code>attr~=valeur</code> : sélectionne les éléments dont l’attribut contient valeur</li>
+<li>…</li>
+</ul>
+<p>Exemple :</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector"><span class="token class">.rouge</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">h1<span class="token class">.rouge</span> </span><span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token id">#article-1</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">img<span class="token attribute">[alt="Pingouin"]</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><img src="https://diu-htmlcss-1858e2.forge.apps.education.fr/2-css/images/tree-css-header-select-2.png" alt="Sélecteurs de classe, d’id et d’attribut"></p>
+<p>Sélecteurs de classe, d’id et d’attribut</p>
+<h4 id="sélecteurs-de-pseudo-classes-et-pseudo-éléments">Sélecteurs de pseudo-classes et pseudo-éléments</h4>
+<p>Références : <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-classes">MDN CSS Pseudo-classes</a> et <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-elements">MDN CSS Pseudo-elements</a></p>
+<ul>
+<li><code>:hover</code> : lorsque la souris survole l’élément</li>
+<li><code>:active</code> : lorsque l’élément est cliqué</li>
+<li><code>:focus</code> : lorsque l’élément a le focus</li>
+<li><code>:first-child</code> : lorsque l’élément est le premier enfant de son parent</li>
+<li><code>:last-child</code> : lorsque l’élément est le dernier enfant de son parent</li>
+<li><code>:nth-child(n)</code> : lorsque l’élément est le n-ième enfant de son parent</li>
+<li><code>:nth-of-type(n)</code> : lorsque l’élément est le n-ième enfant de son parent du même type</li>
+<li><code>:before</code> : avant le contenu de l’élément</li>
+<li><code>:after</code> : après le contenu de l’élément</li>
+<li><code>::first-letter</code> : première lettre de l’élément</li>
+<li><code>::first-line</code> : première ligne de l’élément</li>
+<li><code>::selection</code> : sélection de l’élément</li>
+<li>…</li>
+</ul>
+<h3 id="propriétés">Propriétés</h3>
+<h4 id="toutes-les-propriétés">Toutes les propriétés</h4>
+<p>Les propriétés régissent tous les aspect de la présentation d’un élément : arrière plan, bordures, polices, affichage de texte, positionnement, …</p>
+<p><a href="https://diu-htmlcss-1858e2.forge.apps.education.fr/2-css/docs/css3-cheat-sheet.pdf">Liste “antisèche” de 5 pages, très complète, de 2009 (il manque quelques valeurs)</a> et <a href="https://developer.mozilla.org/fr/docs/Web/CSS">Référence MDN CSS (à jour)</a></p>
+<p>Quelques exemples “classiques”:</p>
+<ul>
+<li><code>font-size</code> : en mm, px, pt, em, rem</li>
+<li><code>font-weight</code> : normal, bold, 200, 300…</li>
+<li><code>color</code> : #RRGGBB ou #RGB ou rgb(255,255,255) ou rgba(255,255,255,1)</li>
+<li><code>background-image</code> : url(‘<a href="http://adresse/image%E2%80%99">http://adresse/image’</a>)</li>
+<li>…</li>
+</ul>
+<h4 id="valeurs">Valeurs</h4>
+<p>Les valeurs dépendent de la propriété; certaines propriétés acceptent des “mots” prédéfinis (ex: <code>text-align: left|right|start|end|center|justify;</code>), d’autres acceptent des valeurs dimensionnelles (ex: <code>font-size: 12px;</code>), d’autres acceptent des valeurs de type couleur (ex: <code>color: #RRGGBB;</code>).</p>
+<h5 id="valeurs-dimensionnelles">Valeurs dimensionnelles</h5>
+<ul>
+<li><code>px</code> : pixels = pixels “réels” (ex: 12px) sur l’écran</li>
+<li><code>pt</code> : points = 1/72 de pouce (ex: 12pt)</li>
+<li><code>mm</code> : millimètres (ex: 12mm) et <code>cm</code> : centimètres (ex: 12cm)</li>
+<li><code>em</code> : taille de la police du <strong>parent</strong></li>
+<li><code>rem</code> : taille de la police de l’<strong>élément racine</strong></li>
+<li><code>%</code> : pourcentage de la taille de l’élément parent</li>
+<li><code>vh</code> : 1% de la hauteur de la fenêtre</li>
+<li><code>vw</code> : 1% de la largeur de la fenêtre</li>
+<li><code>vmin</code> : 1% de la plus petite dimension de la fenêtre</li>
+<li><code>vmax</code> : 1% de la plus grande dimension de la fenêtre</li>
+<li>…</li>
+</ul>
+<h5 id="valeurs-de-couleur">Valeurs de couleur</h5>
+<p>Référence <a href="https://developer.mozilla.org/fr/docs/Web/CSS/color_value">MDN Color value</a></p>
+<ul>
+<li><code>#RRGGBB</code> : rouge, vert, bleu (ex: <code>#FF0000</code> = rouge)</li>
+<li><code>#RGB</code> : rouge, vert, bleu (ex: <code>#F00</code> = rouge)</li>
+<li><code>rgb(255,0,0)</code> : rouge, vert, bleu (ex: <code>rgb(255,0,0)</code> = rouge)</li>
+<li><code>rgba(255,0,0,1)</code> : rouge, vert, bleu, alpha (ex: <code>rgba(255,0,0,1)</code> = rouge)</li>
+<li>couleurs nommées : <code>red</code>, <code>blue</code>, <code>green</code>, <code>yellow</code>, <code>black</code>, <code>white</code>, … cf <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">MDN</a></li>
+<li>…</li>
+</ul>
+<h5 id="valeurs-calculées">Valeurs calculées</h5>
+<p>Référence <a href="https://developer.mozilla.org/fr/docs/Web/CSS/calc">MDN calc()</a></p>
+<ul>
+<li><code>calc()</code> : permet de faire des calculs sur les valeurs dimensionnelles (ex: <code>width: calc(100% - 20px);</code> ou <code>width: calc(100vh - 20px);</code>)</li>
+<li><code>clamp()</code> : permet de fixer une valeur entre deux bornes (ex: <code>width: clamp(100px, calc(...), 500px);</code> ou <code>width: clamp(100px, calc(...), 500px);</code>)</li>
+<li><code>min()</code> : permet de prendre la valeur la plus petite (ex: <code>width: min(100px, 50vw);</code>)</li>
+<li><code>max()</code> : permet de prendre la valeur la plus grande (ex: <code>width: max(100px, 50vw);</code>)</li>
+</ul>
+<h5 id="variables-css">Variables CSS</h5>
+<p>Référence <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Using_CSS_custom_properties">MDN CSS Variables</a></p>
+<p>Les variables CSS permettent de définir des valeurs réutilisables dans le document CSS. Elles sont définies avec le préfixe <code>--</code> et peuvent être utilisées avec la fonction <code>var()</code>. Par exemple :</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector"><span class="token pseudo-class">:root</span> </span><span class="token punctuation">{</span>
+  <span class="token property">--main-color</span><span class="token punctuation">:</span> <span class="token hexcode">#3498db</span><span class="token punctuation">;</span>
+  <span class="token property">--secondary-color</span><span class="token punctuation">:</span> <span class="token hexcode">#2ecc71</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">h1 </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--main-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">p </span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--secondary-color<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h2 id="exercices">Exercices</h2>
+<h4 id="mettre-en-forme-une-page">Mettre en forme une page</h4>
+<p>La page HTML suivante vous est fournie (onglet <strong>HTML</strong>, non modifiable) :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Tux, la mascotte de Linux<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Tux est un manchot, emblème du noyau Linux.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>important<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>À retenir : Tux est un manchot, pas un pingouin !<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Créé en 1996<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Dessiné par Larry Ewing<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Nom proposé par James Hughes<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://fr.wikipedia.org/wiki/Tux<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Article Wikipédia<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>En écrivant <strong>uniquement du CSS</strong> (onglet <strong>CSS</strong>), obtenez la mise en forme suivante :</p>
+<ul>
+<li>le titre <code>&lt;h1&gt;</code> en <strong>bleu</strong> et <strong>centré</strong></li>
+<li>tous les paragraphes en taille de police <strong>18px</strong></li>
+<li>les éléments de liste (<code>&lt;li&gt;</code>) avec une couleur de fond <strong>jaune clair</strong></li>
+<li>l’élément ayant la classe <code>important</code> en <strong>gras</strong> et en <strong>rouge</strong></li>
+<li>le lien (<code>&lt;a&gt;</code>) <strong>sans soulignement</strong>, mais souligné <strong>uniquement au survol</strong> (pseudo-classe <code>:hover</code>)</li>
+</ul>
+<p>Rappel : une règle CSS s’écrit <code>selecteur { propriete: valeur; }</code>.</p>
+<h4 id="sentraîner-aux-sélecteurs">S’entraîner aux sélecteurs</h4>
+<p>La page HTML suivante vous est fournie (onglet <strong>HTML</strong>, non modifiable) :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>menu<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Accueil<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Articles<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Contact<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Les manchots<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Les manchots vivent dans l'<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>hémisphère sud<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>On les classe en plusieurs <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>genres<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span> et espèces :<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Aptenodytes
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Empereur<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Royal<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Pygoscelis
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Adélie<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Gentoo<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Source : <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Wikipédia<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>La page contient des liens <strong>à deux endroits</strong> (le menu et l’article) et une <strong>liste imbriquée</strong>. En écrivant <strong>uniquement du CSS</strong>, et en réfléchissant au <strong>bon sélecteur</strong> pour chaque cible (sans ajouter de classe dans le HTML) :</p>
+<ul>
+<li>les liens <strong>du menu uniquement</strong> (<code>&lt;a&gt;</code> situés dans <code>.menu</code>) : <strong>sans soulignement</strong> et en <strong>vert</strong> — attention à ne pas styler aussi les liens de l’article !</li>
+<li>les liens <strong>de l’article uniquement</strong> : en <strong>orange</strong></li>
+<li>le paragraphe qui suit <strong>immédiatement</strong> le <code>&lt;h1&gt;</code> (sélecteur <code>xx + yy</code>) : en <strong>italique</strong></li>
+<li><strong>uniquement les genres</strong> (les <code>&lt;li&gt;</code> de <strong>premier niveau</strong> de la liste de l’article), <strong>sans</strong> toucher aux espèces imbriquées : avec une <strong>bordure gauche</strong> (<code>border-left</code>) de 3px verte. Indice : le combinateur <code>xx &gt; yy</code> (enfant direct) permet de cibler sans descendre dans la sous-liste.</li>
+<li>les liens du menu <strong>au survol</strong> (<code>:hover</code>) : en <strong>rouge</strong></li>
+</ul>
+
+    </div>
+  </div>
+</body>
+
+</html>
