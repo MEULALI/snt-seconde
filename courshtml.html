@@ -1,0 +1,418 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>html css</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#html">HTML</a>
+<ul>
+<li><a href="#histoire-et-concepts">Histoire et concepts</a></li>
+<li><a href="#url">URL</a></li>
+<li><a href="#syntaxe-html">Syntaxe HTML</a></li>
+<li><a href="#en-pratique">En pratique</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="html">HTML</h1>
+<h2 id="histoire-et-concepts">Histoire et concepts</h2>
+<h3 id="problématique">Problématique</h3>
+<p>Comment créer un texte pouvant <strong>en mode texte seulement</strong> contenir des informations sur son <strong>contenu</strong>, sa <strong>structure</strong> et sa <strong>présentation</strong>, à la fois lisible par un humain et par une machine ?</p>
+<p>C’est dès les annéés 60 que le besoin se fait sentir :</p>
+<ul>
+<li>pour les documents techniques</li>
+<li>pour les documents juridiques</li>
+<li>pour les documents scientifiques</li>
+</ul>
+<p>Il faut trouver un moyen de séparer le fond de la forme.</p>
+<h3 id="historiquement">Historiquement</h3>
+<ul>
+<li>dans les années 1969 : GML<a href="https://diu-htmlcss-1858e2.forge.apps.education.fr/1-html/1-html.html#fn1">1</a> (Generalized Markup Language) est un langage de balisage développé par IBM pour la publication de documentation technique.</li>
+<li>en 1986 : SGML<a href="https://diu-htmlcss-1858e2.forge.apps.education.fr/1-html/1-html.html#fn2">2</a> (Standard Generalized Markup Language) est une norme ISO qui définit un langage de balisage générique.</li>
+<li>en 1991 : HTML<a href="https://diu-htmlcss-1858e2.forge.apps.education.fr/1-html/1-html.html#fn3">3</a> (HyperText Markup Language) est un langage de balisage dérivé de SGML, conçu pour créer des pages web. Il a été développé par Tim Berners-Lee au CERN (Organisation européenne pour la recherche nucléaire) à Genève, en Suisse.</li>
+</ul>
+<h3 id="concept">Concept</h3>
+<p><strong>HyperText Markup Language</strong> :</p>
+<ul>
+<li>HyperText : concept d’interconnexion de documents par des liens hypertextes, parcours non linéaire</li>
+<li>Markup Language : langage de balisage, qui permet de structurer le contenu d’un document en utilisant des balises</li>
+</ul>
+<h4 id="markup-language">Markup language</h4>
+<p>Définition</p>
+<p><strong>Markup language</strong> = langage de balisage : langage informatique permettant de structurer un document en utilisant des balises</p>
+<p>Une balise est un morceau de texte qui “ouvre” un contexte, et ce même contexte est “fermé” par la même balise. Les contextes peuvent être imbriqués, et chaque balise peut contenir des attributs.</p>
+<p>Syntaxe : <code>&lt;balise&gt;...&lt;/balise&gt;</code></p>
+<p>Exemple :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>example<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span>Mon titre<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Mon texte<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Mon premier élément<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Mon deuxième élément<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ol</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Mon premier sous-élément<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Mon deuxième sous-élément<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ol</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>En arrivant à la ligne “Mon premier sous-élément”, on a ouvert successivement les contextes <code>article &gt; ul &gt; li &gt; ol &gt; li</code>. En passant, on a ouvert et fermé le contexte <code>h1</code> et <code>p</code>.</p>
+<p>Règles :</p>
+<ul>
+<li>pas de chevauchement de balises, mode poupées russes</li>
+<li>dans l’idéal, balisage <strong>sémantique</strong> : le balisage doit refléter la structure du document, et non sa présentation; cela permet de séparer le fond de la forme, de faciliter la lecture et la compréhension du document par une machine, et de permettre une présentation différente selon le contexte (impression, écran, etc.)</li>
+</ul>
+<h4 id="hypertext">HyperText</h4>
+<p>Définition</p>
+<p><strong>hypertexte</strong> : Fonction permettant d’établir des liaisons directes entre éléments (texte, image…) de documents différents.</p>
+<p>Inclus dans le balisage, le concept d’hypertexte permet de créer des liens entre les documents, et de naviguer entre eux. Cela permet de créer des pages interconnectées, et de créer une toile d’informations. On utilise pour cela la balise <code>&lt;a&gt;</code> (anchor) qui permet de créer un lien vers une autre page en utilisant l’attribut <code>href</code> (<strong>H</strong>ypertext <strong>REF</strong>erence) pour spécifier l’URL de la page cible.</p>
+<p><img src="https://diu-htmlcss-1858e2.forge.apps.education.fr/1-html/images/hypertext.png" alt="HyperTexte"></p>
+<p>HyperTexte</p>
+<h3 id="suite-de-l’histoire">Suite de l’histoire</h3>
+<ul>
+<li>1995-1999 : HTML 3.2, HTML 4.0, guerre des navigateurs, balbutiements du CSS</li>
+<li>2000-2005 : XHTML, CSS2.1, Internet Explorer, époque sombre</li>
+<li>2007-2012 : HTML5, CSS2, un nouveau souffle, SPA, PWA, WebApps</li>
+<li>2012-… : le bonheur à nouveau, des standards enfin à peu près respectés &amp; uniformes (et IE disparait progressivement)</li>
+</ul>
+<h2 id="url">URL</h2>
+<h3 id="décomposition-d’une-url">Décomposition d’une URL</h3>
+<p>Une <strong>URL</strong> (Uniform Resource Locator) est une adresse qui permet de localiser une ressource sur le Web. Elle est composée de plusieurs parties :</p>
+<ul>
+<li>le protocole (<code>http</code>, <code>https</code>, <code>ftp</code>, <code>file</code>, etc.)</li>
+<li>le nom de domaine (<code>exemple.com</code>) avec éventuellement un sous-domaine (<code>www</code>)</li>
+<li>le chemin d’accès à la ressource (<code>/site/pages/</code>)”</li>
+<li>le nom de la ressource (<code>index.html</code>, <code>image.png</code>, etc.)</li>
+<li>les paramètres de la requête (optionnels) <code>?param1=valeur1&amp;param2=valeur2</code></li>
+<li>le fragment (optionnel) <code>#fragment</code> (navigation dans la page)</li>
+</ul>
+<p>Exemple</p>
+<pre><code>http://www.site.com:8080/path/to/file.html?param1=valeur1&amp;param2=valeur2#fragment
+</code></pre>
+<ul>
+<li>protocole : <code>http</code></li>
+<li>nom de domaine : <code>site.com</code></li>
+<li>sous-domaine : <code>www</code></li>
+<li>port : <code>8080</code></li>
+<li>chemin d’accès : <code>/path/to/file.html</code></li>
+<li>nom de la ressource : <code>index.html</code></li>
+<li>paramètres de la requête : <code>param1</code> (<code>valeur1</code>), <code>param2</code> (<code>valeur2</code>)</li>
+<li>fragment : <code>fragment</code></li>
+</ul>
+<h3 id="urls-relatives-et-absolues">URLs relatives et absolues</h3>
+<p>Dans une page située à l’URL <code>https://exemple.com/site/index.html</code>, on peut utiliser les types d’URL suivants :</p>
+<ul>
+<li><strong>URLs complètes</strong> (vers le même site ou vers un autre site)
+<ul>
+<li><code>https://exemple.com/site/page.html</code></li>
+<li><code>https://exemple.com/images/pingouin.png</code></li>
+<li><code>https://wikipedia.org</code></li>
+</ul>
+</li>
+<li><strong>URLs absolues</strong> (même protocole, domaine et sous-domaine que la page) :
+<ul>
+<li><code>/chemin/vers/page.html</code></li>
+<li><code>/images/pingouin.png</code></li>
+</ul>
+</li>
+<li><strong>URLs relatives</strong> :
+<ul>
+<li><code>./page.html</code> ou <code>page.html</code></li>
+<li><code>../images/pingouin.png</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="syntaxe-html">Syntaxe HTML</h2>
+<h3 id="ouverture-et-fermeture">Ouverture et fermeture</h3>
+<p>Deux syntaxes possibles pour ouvrir et fermer une balise :</p>
+<ul>
+<li>Ouverture : <code>&lt;balise&gt;</code></li>
+<li>Fermeture : <code>&lt;/balise&gt;</code></li>
+</ul>
+<p>Ou bien les deux à la fois :</p>
+<ul>
+<li>OuvertureFermeture : <code>&lt;balise/&gt;</code></li>
+</ul>
+<h3 id="attributs">Attributs</h3>
+<p>Les attributs sont des informations supplémentaires sur une balise. Ils sont écrits dans la balise d’ouverture, après le nom de la balise. Ils sont généralement sous la forme <code>nom_attribut="valeur"</code> ou juste <code>nom_attribut</code> si la seule présence de l’attribut est suffisante pour indiquer son sens.</p>
+<p>Exemple</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://example.com<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Un lien<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>./monimage.png<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Un pingouin<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>article</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>article-1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>...<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>article</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nompropre<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>STALLMAN<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h3 id="balises">Balises</h3>
+<p>Les balises apportent une signification sémantique au document. Le HTML5 a supprimé une grande partie des balises qui n’avaient pas de signification sémantique, la présentation étant déléguée au CSS.</p>
+<ul>
+<li>
+<p><code>article</code>, <code>detail</code>, <code>figure</code>, <code>section</code>, <code>nav</code>, <code>menu</code>, <code>summary</code>, <code>aside</code>…</p>
+<p>organisation</p>
+</li>
+<li>
+<p><code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code>, <code>p</code> : niveaux de titre, paragraphe</p>
+</li>
+<li>
+<p><code>ul</code>, <code>ol</code>, <code>li</code>, <code>dl</code>, <code>dt</code>, <code>dd</code> : listes</p>
+</li>
+<li>
+<p><code>a</code>, <code>img</code>, <code>audio</code>, <code>video</code> : hyperliens, medias</p>
+</li>
+<li>
+<p><code>table</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code>, <code>td</code> : tableaux</p>
+</li>
+<li>
+<p><code>form</code>, <code>input</code>, <code>select</code>, <code>button</code> : formulaires</p>
+</li>
+<li>
+<p><code>code</code>, <code>cite</code>, <code>q</code>, <code>del</code>, <code>kbd</code> : types de contenu</p>
+</li>
+<li>
+<p><code>b</code>, <code>i</code>, <code>em</code>, <code>strong</code>, <code>col</code> : présentation</p>
+</li>
+<li>
+<p><code>span</code>, <code>div</code> : fourre-tout</p>
+</li>
+</ul>
+<p>Liste rapide des balises HTML5 :</p>
+<p><img src="https://diu-htmlcss-1858e2.forge.apps.education.fr/1-html/images/html5_cheat_sheet_tags.png" alt="Antisèche courte"></p>
+<p>Antisèche courte</p>
+<h3 id="ressources">Ressources</h3>
+<ul>
+<li><a href="https://developer.mozilla.org/fr/docs/Web/HTML">MDN</a> : Mozilla Developer Network, site de référence</li>
+<li><a href="https://caniuse.com/">CanIUse</a> : compatibilité des navigateurs</li>
+<li><a href="https://diu-htmlcss-1858e2.forge.apps.education.fr/1-html/images/html5_cheat_sheet_tags.png">Antisèche courte</a> : image résumée des balises HTML5</li>
+<li><a href="https://diu-htmlcss-1858e2.forge.apps.education.fr/1-html/docs/html5-cheat-sheet.pdf">Antisèche longue</a> : document PDF très complet sur toutes les balises HTML5</li>
+<li><a href="https://www.w3.org/TR/html52/">HTML5</a> : spécification HTML5 et plus précisément la partie <a href="https://html.spec.whatwg.org/multipage/indices.html#elements-3">Éléments</a></li>
+</ul>
+<h2 id="en-pratique">En pratique</h2>
+<h3 id="créer-une-page-html">Créer une page HTML</h3>
+<p>Il suffit d’un éditeur de texte (même le Notepad de Window$) pour créer une page HTML : <code>nomdufichier.html</code>. On tape le code HTML, on enregistre et on ouvre le fichier avec un navigateur web.</p>
+<p>Cependant il est préférable d’utiliser un éditeur de code, qui va colorer la syntaxe et aider à la mise en forme. Il existe de nombreux éditeurs de code, gratuits ou payants, pour tous les systèmes d’exploitation. Voici quelques exemples :</p>
+<ul>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a> (Windows, Linux, MacOS)</li>
+<li><a href="https://zed.dev/">Zed</a> (Windows, Linux, MacOS)</li>
+<li><a href="https://notepad-plus-plus.org/">Notepad++</a> (Windows)</li>
+</ul>
+<p>Et bien sûr :</p>
+<ul>
+<li><a href="https://www.vim.org/">Vim</a> (Linux, MacOS, Windows) ou <a href="https://neovim.io/">Neovim</a> (Linux, MacOS, Windows)</li>
+<li><a href="https://www.gnu.org/software/emacs/">Emacs</a> (Linux, MacOS, Windows)</li>
+</ul>
+<h3 id="structure-d’une-page-html">Structure d’une page HTML</h3>
+<pre class=" language-html"><code class="prism  language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fr<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Mon titre<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  ...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h4 id="en-tête-head">En-tête (head)</h4>
+<p>L’en-tête d’une page HTML est la partie qui contient les informations sur la page, comme le titre, les métadonnées, les liens vers les feuilles de style et les scripts. Il est contenu dans la balise <code>&lt;head&gt;</code>. Les informations contenues dans l’en-tête ne sont pas affichées directement sur la page, mais elles sont utilisées par le navigateur et les moteurs de recherche pour comprendre le contenu de la page.</p>
+<p>Les éléments les plus courants dans l’en-tête sont :</p>
+<ul>
+<li><code>&lt;meta charset="UTF-8"&gt;</code> : indique l’encodage des caractères utilisé dans la page (UTF-8 est quasi-obligatoire de nos jours)</li>
+<li><code>&lt;title&gt;Mon titre&lt;/title&gt;</code> : définit le titre de la page, qui s’affiche dans l’onglet du navigateur et dans les résultats de recherche</li>
+<li><code>&lt;link rel="stylesheet" href="style.css"&gt;</code> : lie une feuille de style CSS externe à la page</li>
+<li><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code> : lie un script JavaScript externe à la page</li>
+<li><code>&lt;meta name="description" content="Description de la page"&gt;</code> : fournit une description de la page pour les moteurs de recherche</li>
+<li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" /&gt;</code> : permet de contrôler la mise en page sur les appareils mobiles</li>
+</ul>
+<h4 id="le-corps-body">Le corps (body)</h4>
+<p>Le corps d’une page HTML est la partie qui contient le contenu visible de la page, comme le texte, les images, les vidéos, les liens, etc. Il est contenu dans la balise <code>&lt;body&gt;</code>. C’est dans cette partie que l’on va écrire le contenu principal de la page, en utilisant les différentes balises HTML pour structurer et formater le texte, insérer des images, créer des liens, etc.</p>
+<h3 id="balises-utiles">Balises utiles</h3>
+<h4 id="les-attributs-globaux">Les attributs globaux</h4>
+<p>Avant de détailler les balises, notons que quelques attributs peuvent s’appliquer à <strong>n’importe quelle</strong> balise :</p>
+<ul>
+<li><code>id="..."</code> : identifiant <strong>unique</strong> dans toute la page (cible d’un lien <code>#fragment</code>, sélection en CSS/JS)</li>
+<li><code>class="..."</code> : une ou plusieurs classes (séparées par des espaces), <strong>partageables</strong> entre plusieurs éléments — c’est le principal moyen de cibler des éléments en CSS</li>
+<li><code>title="..."</code> : info-bulle affichée au survol</li>
+<li><code>lang="..."</code> : langue du contenu (utile pour l’accessibilité et la traduction)</li>
+<li><code>style="..."</code> : styles CSS écrits directement sur la balise (à éviter, on préfère une feuille de style)</li>
+</ul>
+<h4 id="balise-de-contenu-général">Balise de contenu général</h4>
+<p>Les titres : <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code> : ils traduisent un niveau hiérarchique dans le document, <code>&lt;h1&gt;</code> étant le plus important et <code>&lt;h6&gt;</code> le moins important, et <strong>pas</strong> un style visuel.</p>
+<p>Les balises de structure : <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;footer&gt;</code> : elles permettent de structurer le contenu en sections logiques, et d’améliorer l’accessibilité et le référencement. Sans CSS, elles sont indistinguables visuellement, mais elles ont un sens sémantique pour les moteurs de recherche et les lecteurs d’écran.</p>
+<ul>
+<li><code>article</code> : un contenu autonome, comme un article de blog ou une news</li>
+<li><code>section</code> : une section thématique du document, regroupant un ensemble de contenus liés</li>
+<li><code>nav</code> : une section de navigation, contenant des liens vers d’autres pages ou sections</li>
+<li><code>aside</code> : un contenu secondaire ou complémentaire, comme une barre latérale ou un encadré d’information</li>
+<li><code>header</code> : l’en-tête d’une page ou d’une section, contenant généralement le titre et les éléments de navigation</li>
+<li><code>footer</code> : le pied de page d’une page ou d’une section, contenant généralement des informations de contact, des liens vers des pages importantes, etc.</li>
+</ul>
+<p>Le paragraphe : <code>&lt;p&gt;</code> : il permet de créer un paragraphe de texte. On ne doit pas imbriquer des paragraphes.</p>
+<p>Attention</p>
+<p>Un paragraphe et un passage à la ligne sont deux choses différentes. Pour créer un passage à la ligne, on utilise la balise <code>&lt;br&gt;</code>. La différence est que le paragraphe crée un bloc de texte avec un espacement avant et après, tandis que le passage à la ligne ne fait qu’aller à la ligne suivante sans créer de bloc.</p>
+<h4 id="les-liens-et-les-images">Les liens et les images</h4>
+<p>Les hyperliens : <code>&lt;a href="url"&gt;texte du lien&lt;/a&gt;</code> : ils permettent de créer un lien vers une autre page ou un autre site. L’attribut <code>href</code> contient l’URL de la page cible. On peut aussi utiliser l’attribut <code>target="_blank"</code> pour ouvrir le lien dans un nouvel onglet.</p>
+<p>Les images : <code>&lt;img src="url" alt="texte alternatif"/&gt;</code> : ils permettent d’insérer une image dans la page. L’attribut <code>src</code> contient l’URL de l’image, et l’attribut <code>alt</code> contient un texte alternatif qui s’affiche si l’image ne peut pas être chargée.</p>
+<h4 id="les-listes-et-tableaux">Les listes et tableaux</h4>
+<p>Les listes : <code>&lt;ul&gt;</code> pour une liste non ordonnée (à puces), <code>&lt;ol&gt;</code> pour une liste ordonnée (numérotée), et <code>&lt;li&gt;</code> pour chaque élément de la liste :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Premier élément<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>Deuxième élément<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>Un tableau se démarre avec <code>&lt;table&gt;</code>, puis on définit les lignes avec <code>&lt;tr&gt;</code>, les cellules d’en-tête avec <code>&lt;th&gt;</code> et les cellules de données avec <code>&lt;td&gt;</code>; l’en-tête du tableau est généralement contenu dans <code>&lt;thead&gt;</code>, le corps du tableau dans <code>&lt;tbody&gt;</code> et le pied du tableau dans <code>&lt;tfoot&gt;</code>.</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>thead</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>En-tête 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>th</span><span class="token punctuation">&gt;</span></span>En-tête 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>th</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>thead</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tbody</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>Donnée 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>Donnée 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>Donnée 3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>Donnée 4<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tbody</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tfoot</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>Pied 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span><span class="token punctuation">&gt;</span></span>Pied 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>td</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tfoot</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h4 id="le-texte-enrichi-balises-inline">Le texte enrichi (balises <em>inline</em>)</h4>
+<p>À l’intérieur d’un paragraphe, on peut mettre en valeur ou qualifier des portions de texte avec des balises dites <em>inline</em> (elles n’interrompent pas le flux du texte, contrairement à un paragraphe). On distingue les balises <strong>sémantiques</strong> (qui portent un sens) des balises de <strong>présentation</strong> (qui ne décrivent qu’une apparence) :</p>
+<ul>
+<li><code>&lt;strong&gt;</code> : contenu <strong>d’importance forte</strong> (sémantique) — affiché en gras par défaut</li>
+<li><code>&lt;em&gt;</code> : contenu <strong>mis en emphase</strong> (sémantique) — affiché en italique par défaut</li>
+<li><code>&lt;b&gt;</code> : texte en <strong>gras</strong> (présentation, sans valeur sémantique)</li>
+<li><code>&lt;i&gt;</code> : texte en <em>italique</em> (présentation, sans valeur sémantique)</li>
+<li><code>&lt;code&gt;</code> : un fragment de code source, affiché en police à chasse fixe</li>
+<li><code>&lt;span&gt;</code> : conteneur <em>inline</em> générique, sans signification propre (on s’en sert pour cibler une portion de texte en CSS ou en JavaScript)</li>
+</ul>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>
+  Le langage <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>strong</span><span class="token punctuation">&gt;</span></span>HTML<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>strong</span><span class="token punctuation">&gt;</span></span> structure le contenu, tandis que le
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>em</span><span class="token punctuation">&gt;</span></span>CSS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>em</span><span class="token punctuation">&gt;</span></span> gère la présentation. On écrit une balise ainsi :
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>code</span><span class="token punctuation">&gt;</span></span><span class="token entity" title="&lt;">&amp;lt;</span>p<span class="token entity" title="&gt;">&amp;gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>code</span><span class="token punctuation">&gt;</span></span>.
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>Sémantique avant présentation</p>
+<p>On préfère <strong>toujours</strong> <code>&lt;strong&gt;</code> et <code>&lt;em&gt;</code> à <code>&lt;b&gt;</code> et <code>&lt;i&gt;</code> : un lecteur d’écran insistera sur un <code>&lt;strong&gt;</code>, et un moteur de recherche comprendra l’importance du passage. Le « gras » ou l’« italique » purement visuels relèvent du CSS.</p>
+<h4 id="les-conteneurs-génériques--div-et-span">Les conteneurs génériques : <code>&lt;div&gt;</code> et <code>&lt;span&gt;</code></h4>
+<p>Quand aucune balise sémantique ne correspond à ce que l’on veut regrouper, on utilise un conteneur <strong>générique</strong>, sans signification particulière, dont le seul rôle est de servir de point d’accroche pour le CSS ou le JavaScript :</p>
+<ul>
+<li><code>&lt;div&gt;</code> : conteneur de type <strong>bloc</strong> (prend toute la largeur disponible, va à la ligne)</li>
+<li><code>&lt;span&gt;</code> : conteneur de type <strong>inline</strong> (reste dans le flux du texte)</li>
+</ul>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>carte<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>badge<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Nouveau<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+  Bonjour <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>nom<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>le monde<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span> !
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>À n’utiliser qu’en dernier recours</p>
+<p><code>&lt;div&gt;</code> et <code>&lt;span&gt;</code> n’ont <strong>aucun sens</strong> pour une machine. On leur préfère toujours une balise sémantique quand elle existe (<code>&lt;article&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;strong&gt;</code>…). On ne les emploie que lorsqu’aucune balise sémantique ne convient.</p>
+<h4 id="block-et-inline">Block et inline</h4>
+<p>C’est une distinction fondamentale, qui prépare la partie sur le CSS :</p>
+<ul>
+<li>un élément <strong>bloc</strong> (<code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;article&gt;</code>…) occupe toute la largeur disponible et provoque un retour à la ligne avant et après ; on peut en imbriquer d’autres à l’intérieur.</li>
+<li>un élément <strong>inline</strong> (<code>&lt;a&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;img&gt;</code>…) reste dans le flux du texte et n’occupe que la largeur de son contenu.</li>
+</ul>
+<p>Règle</p>
+<p>On ne place <strong>pas</strong> un élément bloc à l’intérieur d’un élément inline (par exemple un <code>&lt;div&gt;</code> dans un <code>&lt;span&gt;</code> ou dans un <code>&lt;a&gt;</code> : à éviter). L’inverse est normal : un bloc contient du texte et des éléments inline.</p>
+<h4 id="les-balises-auto-fermantes">Les balises auto-fermantes</h4>
+<p>Certaines balises ne contiennent jamais de contenu : on les appelle <em>balises auto-fermantes</em> (ou <em>void elements</em>). On les écrit avec une seule balise, qui peut se terminer par <code>/&gt;</code> :</p>
+<ul>
+<li><code>&lt;br /&gt;</code> : passage à la ligne</li>
+<li><code>&lt;hr /&gt;</code> : ligne de séparation horizontale (changement de thème)</li>
+<li><code>&lt;img /&gt;</code> : image</li>
+<li><code>&lt;input /&gt;</code> : champ de formulaire</li>
+<li><code>&lt;meta /&gt;</code> et <code>&lt;link /&gt;</code> : métadonnées et liens dans l’en-tête</li>
+</ul>
+<h4 id="les-commentaires">Les commentaires</h4>
+<p>On peut insérer des commentaires, ignorés par le navigateur, pour annoter le code. Ils ne sont pas affichés sur la page (mais restent visibles dans le code source) :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token comment">&lt;!-- Ceci est un commentaire, il n'apparaît pas dans la page --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Texte visible<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<h4 id="les-caractères-spéciaux-entités-html">Les caractères spéciaux (entités HTML)</h4>
+<p>Certains caractères ont une signification en HTML (<code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>) : pour les <strong>afficher</strong> tels quels, on utilise des <em>entités HTML</em>, qui commencent par <code>&amp;</code> et finissent par <code>;</code> :</p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Caractère</th>
+<th align="center">Entité</th>
+<th align="left">Signification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>&lt;</code></td>
+<td align="center"><code>&amp;lt;</code></td>
+<td align="left">less than (inférieur)</td>
+</tr>
+<tr>
+<td align="center"><code>&gt;</code></td>
+<td align="center"><code>&amp;gt;</code></td>
+<td align="left">greater than (supérieur)</td>
+</tr>
+<tr>
+<td align="center"><code>&amp;</code></td>
+<td align="center"><code>&amp;amp;</code></td>
+<td align="left">esperluette</td>
+</tr>
+<tr>
+<td align="center"><code>"</code></td>
+<td align="center"><code>&amp;quot;</code></td>
+<td align="left">guillemet</td>
+</tr>
+<tr>
+<td align="center"><em>(espace)</em></td>
+<td align="center"><code>&amp;nbsp;</code></td>
+<td align="left">espace insécable</td>
+</tr>
+<tr>
+<td align="center"><code>é</code></td>
+<td align="center"><code>&amp;eacute;</code></td>
+<td align="left">e accent aigu</td>
+</tr>
+</tbody>
+</table><p>Encodage</p>
+<p>Avec <code>&lt;meta charset="UTF-8"&gt;</code> dans l’en-tête, on peut écrire directement les caractères accentués (<code>é</code>, <code>à</code>, <code>ç</code>…) sans passer par les entités. Celles-ci restent indispensables pour les caractères réservés <code>&lt;</code>, <code>&gt;</code> et <code>&amp;</code>.</p>
+<h4 id="écrire-une-page-complète">Écrire une page complète</h4>
+<p>Créer une page web complète (head,body) contenant :</p>
+<ul>
+<li>un grand titre</li>
+<li>un paragraphe introductif</li>
+<li>un article contenant
+<ul>
+<li>un sous-titre</li>
+<li>une liste numérotée de 3 liens vers des articles wikipedia de votre choix, s’ouvrant dans un nouvel onglet</li>
+<li>un tableau de 2 colonnes et 3 lignes, avec pour en-tête “Photo” et “Présentation” et contenant une photo de Tux (url : <code>https://solidev.net/tux/tuxXXX.png</code>, XXX=1 jusqu’à 946) et sa présentation</li>
+</ul>
+</li>
+</ul>
+<p>Je vous laisse l’inspiration sur les textes…</p>
+
+    </div>
+  </div>
+</body>
+
+</html>
