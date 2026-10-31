@@ -462,3 +462,38 @@ footer {
 
     border-radius: 5px;
 }
+/* ===== Bouton flottant "Retour accueil" ===== */
+.bouton-retour {
+    position: fixed;               /* reste fixe à l'écran */
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #2c6fbb;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+}
+
+.bouton-retour:hover {
+    background: #e8850c;
+    transform: translateY(-3px);
+}
+
+/* Sur mobile : un peu plus discret */
+@media (max-width: 800px) {
+    .bouton-retour {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+
