@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>projetweb</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__left">
+    <div class="stackedit__toc">
+      
+<ul>
+<li><a href="#le-web--structure-dun-site-web-le-html">Le Web : Structure d’un site Web (le HTML)</a>
+<ul>
+<li><a href="#le-web">Le Web</a></li>
+<li><a href="#table-des-matières">Table des matières</a></li>
+<li><a href="#méthode-de-création-dun-site-web">1. Méthode de création d’un site web</a></li>
+<li><a href="#outil-de-développement">2. Outil de développement</a></li>
+<li><a href="#structure-du-site">3. Structure du site</a></li>
+<li><a href="#insérer-des-références-ou-liens">4. Insérer des références ou liens</a></li>
+<li><a href="#ajouter-du-contenu">5. Ajouter du contenu</a></li>
+<li><a href="#mettre-en-forme-le-texte">Mettre en forme le texte</a></li>
+<li><a href="#faire-des-listes">Faire des listes</a></li>
+</ul>
+</li>
+<li><a href="#le-web--structure-dun-site-web-le-css">Le Web : Structure d’un site Web (le CSS)</a>
+<ul>
+<li><a href="#utiliser-le-langage-css-pour-mettre-en-forme-un-site-web">6. Utiliser le langage CSS pour mettre en forme un site web</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+  </div>
+  <div class="stackedit__right">
+    <div class="stackedit__html">
+      <h1 id="le-web--structure-dun-site-web-le-html">Le Web : Structure d’un site Web (le HTML)</h1>
+<h2 id="le-web">Le Web</h2>
+<p>Le Web (toile ou réseau) désigne un système donnant accès à un ensemble de données (page, image, son, vidéo) reliées par des liens et accessibles sur le réseau internet. Un navigateur web permet d’accéder à n’importe quel site web en fonction de ce que l’on souhaite obtenir comme information. Tous ces sites web sont écrits en utilisant les langages HTML et CSS.</p>
+<p>Le langage <strong>HTML</strong> (<em>HyperText Markup Language</em>) a fait son apparition dès 1991 lors du lancement du Web. Son rôle est de gérer et organiser le contenu d’un site. Le langage <strong>CSS</strong> (<em>Cascading Style Sheets</em>, aussi appelées <em>Feuilles de style</em>) permet de gérer l’apparence de la page web (agencement, positionnement, décoration, couleurs, taille du texte…). Ce langage est venu compléter le HTML en 1996.</p>
+<p>Nous allons découvrir à travers cet article comment concevoir un site web délivrant des informations musicales et contenant au moins une page qui contiendra des articles de news sur les artistes. On pourrait ajouter une page donnant le classement des meilleures musiques de la semaine et une autre page permettant de rechercher des informations sur les chanteurs, les chansons, les paroles…</p>
+<h2 id="table-des-matières">Table des matières</h2>
+<ol>
+<li><a href="#1-m%C3%A9thode-de-cr%C3%A9ation-dun-site-web">Méthode de création d’un site web</a></li>
+<li><a href="#2-outil-de-d%C3%A9veloppement">Outil de développement</a></li>
+<li><a href="#3-structure-du-site">Structure du site</a></li>
+<li><a href="#4-ins%C3%A9rer-des-r%C3%A9f%C3%A9rences-ou-liens">Insérer des références ou liens</a></li>
+<li><a href="#5-ajouter-du-contenu">Ajouter du contenu</a></li>
+</ol>
+<h2 id="méthode-de-création-dun-site-web">1. Méthode de création d’un site web</h2>
+<p>La première méthode de création d’un site web, dite traditionnelle, a pour base de développer le site internet sur la base d’un cahier des charges précis qui nécessite une phase de définition du projet assez longue. Le cahier des charges doit être le plus technique possible avant que le développement du site commence. Cette méthode permet d’avoir une vision globale du projet mais est longue et est de moins en moins adaptée à un secteur en évolution permanente.</p>
+<p>Les étapes clés de cette méthode sont :</p>
+<ul>
+<li><strong>Définition du projet</strong> : analyse du contexte et des objectifs, concurrence, formalisation du cahier des charges.</li>
+<li><strong>Définition de l’architecture du site</strong> : arborescence (pages), parcours visiteurs, structure des pages, rédaction des textes, hébergement, environnement de développement.</li>
+<li><strong>Conception graphique</strong> : brainstorming créatif, choix d’une identité graphique générale, aspect visuel des pages et maquettes.</li>
+<li><strong>Développement et intégration</strong> : installation CMS (aide à la mise en ligne), codage en HTML/CSS des pages, développements spécifiques de modules, API, etc.</li>
+<li><strong>Recette et mise en ligne</strong> : tests fonctionnels, de performance, relecture des textes, optimisation des mots clés, tracking (Google Analytics),…</li>
+<li><strong>Suivi et maintenance</strong> : mise à jour des outils utilisés, résolution des bugs, administration de serveur, suivi des statistiques, création de bannières de visuels…</li>
+</ul>
+<p>Les méthodes agiles sont une manière très différente d’envisager la création d’un site web. Elles sont apparues dans les années 1990 en réponse aux besoins de créativités d’organisations en croissance rapide. L’Agile Manifesto, rédigé en 2001, a posé les fondements théoriques de l’Agile. Les méthodes agiles partent du principe que spécifier et planifier dans les détails l’intégralité d’un produit avant de le développer (approche prédictive) est contre-productif.</p>
+<p>L’idée consiste à se fixer un premier objectif à court terme et se lancer sans tarder. Une fois ce premier objectif atteint, on fait un point et on lance un objectif simple à atteindre ensuite et ainsi de suite. On parle donc d’une approche empirique. Dans le cadre d’un projet de développement logiciel, le client élabore sa vision du produit à réaliser et liste les fonctionnalités ou exigences de ce dernier. Il soumet cette liste à l’équipe de développement, communique directement avec elle (plutôt que par papier) qui estime le coût de chaque élément de la liste. On peut ainsi se faire une idée approximative du budget global.</p>
+<p>C’est en suivant ce type de démarche que nous allons construire notre site web, les éléments seront déterminés au fur et à mesure de l’avancement du site.</p>
+<h2 id="outil-de-développement">2. Outil de développement</h2>
+<p>Un simple éditeur de texte permet de réaliser un site web. Il existe des logiciels plus évolués permettant de simplifier certains aspects de la création d’un site web (animations par exemple) ou fournissant des raccourcis mais leur prise en main n’est pas toujours simple. On pourra par exemple utiliser Google Web Designer (gratuit).</p>
+<p>Pour simplifier la réalisation du site, nous utiliserons le logiciel Notepad++ qui offre la coloration syntaxique automatique pour l’HTML et le CSS. Il est possible de simplifier l’écriture HTML et CSS en modifiant les préférences (menu Paramétrage dans Notepad++) et en cochant notamment les balises fermantes.</p>
+<p>Une fois le logiciel lancé, créer un nouveau fichier et l’enregistrer sous le nom « index.html » dans un répertoire nommé Musique. Tous les fichiers créés par la suite seront mis dans ce répertoire.</p>
+<h2 id="structure-du-site">3. Structure du site</h2>
+<p>Le langage HTML est constitué de balises, invisibles à l’écran pour les visiteurs, qui permettent à l’ordinateur de savoir ce qu’il doit afficher.</p>
+<p>Les balises vont souvent par paires : <code>&lt;balise&gt; texte &lt;/balise&gt;</code>, mais on peut utiliser des balises orphelines pour insérer un élément à un endroit précis : <code>&lt;balise texte /&gt;</code>.</p>
+<p>Dans le fichier index.html, tapez le code suivant et enregistrez le document :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Passion Musique<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<ul>
+<li>La balise <code>&lt;html&gt;</code> est la balise principale du code et englobe tout le contenu du site.</li>
+<li>La balise <code>&lt;head&gt;</code> (pour entête) donne quelques informations générales sur la page comme :
+<ul>
+<li>son titre (balise <code>&lt;title&gt;</code>) qui apparaît dans l’onglet du navigateur ;</li>
+<li>l’encodage, ici utf-8 (pour les accents, caractères spéciaux…) ;</li>
+<li>les fonctions utilisées, etc.</li>
+</ul>
+</li>
+<li>Le corps du document <code>&lt;body&gt;</code> est la partie principale de la page et définit ce qui sera affiché à l’écran. La majeure partie du code sera écrit entre ces balises.</li>
+</ul>
+<p>Après avoir enregistré le document, vous pouvez tester le site en cliquant dans l’explorateur Windows sur le fichier index.html (il est vide !).</p>
+<p>Tout le code écrit dans cette page peut être vu par n’importe quel utilisateur via son navigateur en cliquant droit sur le site puis sur Afficher le code source de la page. Il ne faut donc pas mettre d’informations sensibles dans les pages html (mots de passe, informations personnelles…).</p>
+<h3 id="raccourcis-du-navigateur">Raccourcis du navigateur</h3>
+
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Raccourci</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Retour</td>
+<td>Alt+Gauche</td>
+</tr>
+<tr>
+<td>Avancer</td>
+<td>Alt+Droite</td>
+</tr>
+<tr>
+<td>Actualiser</td>
+<td>Ctrl+R</td>
+</tr>
+<tr>
+<td>Enregistrer sous…</td>
+<td>Ctrl+S</td>
+</tr>
+<tr>
+<td>Imprimer…</td>
+<td>Ctrl+P</td>
+</tr>
+<tr>
+<td>Afficher le code source de la page</td>
+<td>Ctrl+U</td>
+</tr>
+<tr>
+<td>Inspecter</td>
+<td>Ctrl+Maj+I</td>
+</tr>
+</tbody>
+</table><p>En général, les sites web possèdent une zone d’entête (<code>&lt;header&gt;</code>), une zone de pied de page (<code>&lt;footer&gt;</code>), une zone de navigation entre les pages du site (<code>&lt;nav&gt;</code>) et des zones différentes en fonction de thématique (<code>&lt;section&gt;</code>).</p>
+<p><strong>Figure 1 : Exemple d’organisation de sites web</strong> <em>(image extraite du PDF)</em></p>
+<p>Pour le site web que nous souhaitons créer, nous mettrons dans la partie <em>header</em> une image avec le nom du site, le bandeau de navigation sera situé en dessous et on trouvera une seule zone <em>section</em> et un <em>footer</em> en bas de page pour indiquer le contact, le crédit, etc…</p>
+<p>Le code correspondant est donc :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>header</span><span class="token punctuation">&gt;</span></span>
+        Titre
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>header</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span><span class="token punctuation">&gt;</span></span>
+        A définir
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span><span class="token punctuation">&gt;</span></span>
+        Texte
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>footer</span><span class="token punctuation">&gt;</span></span>
+        Contact, Crédit
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>footer</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>On peut également faire des sous-sections en utilisant la balise <code>&lt;div&gt;</code>.</p>
+<h2 id="insérer-des-références-ou-liens">4. Insérer des références ou liens</h2>
+<p>Dans la plupart des zones, notamment la zone de navigation, on souhaite pouvoir faire référence à d’autres pages du site qui donneront des informations différentes. On peut également faire référence à des sites externes.</p>
+<p>Il faut donc créer de nouvelles pages html qui auront une structure proche de la page index.html (copier et renommer la page index.html en classement.html et en recherche.html).</p>
+<p>Pour faire un lien, la balise utilisée est : <code>&lt;a&gt;</code>. Il faut cependant lui ajouter un attribut, <code>href</code>, pour indiquer vers quelle page le lien doit conduire.</p>
+<p>Ainsi dans la zone navigation, on ajoutera le code suivant pour faire des liens entre 3 pages :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nav</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>index.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>News<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>classement.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Classement<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>recherche.html<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Recherche<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nav</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>Enregistrer le fichier index.html puis le copier et renommer en classement.html et recherche.html. Modifier le titre au niveau de la section header pour chaque page.</p>
+<p>On peut tester le site en cliquant sur index.html et voir que l’on navigue ainsi entre les trois pages internes en cliquant sur les liens.</p>
+<p><strong>Remarques :</strong></p>
+<ul>
+<li>pour faire référence à un site externe, on ajoutera dans <code>href</code> : <code>http://adresse.html</code> ;</li>
+<li>si la page que l’on souhaite atteindre est dans un sous-répertoire, on écrira : <code>sous_repertoire/page.html</code> ;</li>
+<li>si on ajoute l’attribut <code>target="_blank"</code> à la balise <code>&lt;a&gt;</code>, l’appui sur le lien ouvrira un nouvel onglet.</li>
+</ul>
+<p>On utilise de la même manière les liens pour permettre de télécharger un document (on remplace le nom de la page par le nom du fichier à télécharger). Pour envoyer un mail, on ajoute <code>mailto:adresse@xxx.fr</code> à la place du nom de la page : Contactez-moi.</p>
+<h2 id="ajouter-du-contenu">5. Ajouter du contenu</h2>
+<p>Maintenant que la structure du site est prête, nous allons voir comment ajouter des images, des vidéos, mettre en valeur certains textes, aller à la ligne, etc.</p>
+<p>Il est préférable de regrouper les ressources dans des dossiers pour que le site soit bien organisé. Par exemple, on peut créer un sous-répertoire <em>images</em> contenant les images à insérer.</p>
+<h3 id="insérer-une-image-une-vidéo-un-son">Insérer une image, une vidéo, un son</h3>
+<p>La balise qui permet d’insérer une image est une balise orpheline : <code>&lt;img /&gt;</code>. On ajoute l’attribut <code>src</code> pour faire référence à l’image dans le dossier du site.</p>
+<p>Par exemple dans la partie header, on ajoutera : <code>&lt;img src="images/banner.jpg" alt="banner"/&gt;</code>. L’attribut <code>alt</code> permet d’ajouter un texte alternatif si l’image ne peut pas être chargée. La plupart des formats d’images sont disponibles mais il faut préférer des images compressées (png, jpg, gif) pour ne pas alourdir les chargements. Attention, ne pas mettre d’accents, espaces, caractères spéciaux dans les noms des images (dans tous les noms de fichiers de manière générale). On peut utiliser l’attribut <code>title</code> pour ajouter une info-bulle à l’image.</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/banner.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>banner<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bannière du site d<span class="token punctuation">'</span>informations musicales<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+</code></pre>
+<h2 id="mettre-en-forme-le-texte">Mettre en forme le texte</h2>
+<p>Pour mettre en forme le site, on utilise le langage CSS, mais certaines balises HTML permettent de mettre en valeur du texte ou d’organiser du texte plus rapidement.</p>
+<p>Pour faire des paragraphes, on utilise la balise <code>&lt;p&gt; Texte de paragraphe &lt;/p&gt;</code>.</p>
+<p>Pour aller à la ligne à l’intérieur d’un paragraphe, on utilise la balise orpheline : <code>&lt;br /&gt;</code>.</p>
+<p>On peut également mettre en valeur des titres de paragraphes en utilisant différentes balises <code>&lt;h1&gt;</code> (très important), <code>&lt;h2&gt;</code> (important), … jusqu’à <code>&lt;h6&gt;</code> (pas du tout important). Ceci permet de structurer des paragraphes en sous-niveaux.</p>
+<p>Par exemple, entre les balises <code>&lt;section&gt;</code>, on peut écrire :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span> L'artiste 1 est de retour <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>L'artiste bien connu est enfin de retour après des années d'absence.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Il a décidé de créer un nouvel album.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>On peut également mettre en valeur certaines zones d’un texte en utilisant d’autres balises particulières : <code>&lt;em&gt;</code> (un peu en valeur), <code>&lt;strong&gt;</code> (fortement en valeur), <code>&lt;mark&gt;</code> (texte marqué), <code>&lt;b&gt;</code> (gras), <code>&lt;i&gt;</code> (italique)…</p>
+<h2 id="faire-des-listes">Faire des listes</h2>
+<p>Les éléments peuvent être classés selon différentes listes, ordonnées ou non ordonnées.</p>
+<p>Une liste non-ordonnée utilise les balises <code>&lt;ul&gt;</code> et chaque élément de la liste doit être placé entre les balises <code>&lt;li&gt;</code>.</p>
+<p>La section de la page index.html contiendra une liste d’articles. Si on clique sur un élément de cette liste, on ouvrira une nouvelle page contenant l’article détaillé (les pages html doivent exister bien sûr !). On pourra ajouter le code suivant :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span> L'artiste 1 est de retour <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>L'artiste bien connu est enfin de retour après des années d'absence.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Il a décidé de créer un nouvel album.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span> L'artiste 2 est de retour <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>L'artiste bien connu est enfin de retour après des années d'absence.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Il a décidé de créer un nouvel album.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span> L'artiste 3 est de retour <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>L'artiste bien connu est enfin de retour après des années d'absence.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Il a décidé de créer un nouvel album.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span> L'artiste 4 est de retour <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>L'artiste bien connu est enfin de retour après des années d'absence.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Il a décidé de créer un nouvel album.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    ...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>Une liste ordonnée (numérotée) serait placée entre les balises <code>&lt;ol&gt;</code> à la place de <code>&lt;ul&gt;</code>.</p>
+<h1 id="le-web--structure-dun-site-web-le-css">Le Web : Structure d’un site Web (le CSS)</h1>
+<h2 id="utiliser-le-langage-css-pour-mettre-en-forme-un-site-web">6. Utiliser le langage CSS pour mettre en forme un site web</h2>
+<p>Nous avons vu que certaines balises permettaient de mettre en valeur du texte et qu’on pouvait organiser des éléments avec d’autres balises (listes, divisions…). Le CSS permet de gérer plus finement la mise en page du site. Cliquez sur le lien suivant pour en voir des exemples : <a href="http://www.csszengarden.com/tr/fr/">www.csszengarden.com/tr/fr/</a></p>
+<h3 id="principes-du-css">Principes du CSS</h3>
+<p>Le code CSS s’écrit généralement dans un fichier séparé, par exemple <code>styles.css</code>, et on ajoute entre les balises <code>&lt;head&gt; &lt;/head&gt;</code> la commande : <code>&lt;link rel="stylesheet" href="styles.css" /&gt;</code>. On peut également directement écrire le code CSS entre les balises <code>&lt;head&gt; &lt;style&gt; code css &lt;/style&gt; &lt;/head&gt;</code>.</p>
+<p>Dans le fichier styles.css, on ajoute par exemple la commande :</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector">h1
+</span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Cette commande permet de redéfinir la couleur de police associée à la balise h1 (bleue à la place de noire par défaut).</p>
+<p>On peut donc redéfinir de cette manière les styles de toutes les balises html.</p>
+<p>Le code CSS est constitué du nom de la balise, de propriétés CSS (ici <code>color</code>) suivies de valeurs associées à cette propriété (ici <code>blue</code>). Ne pas oublier les <code>:</code> et le <code>;</code> en fin de commande.</p>
+<p>Il existe un très grand nombre de propriétés : <code>font-size</code>, <code>font-family</code>, <code>font-style</code>, <code>text-align</code>, <code>color</code>, <code>background-color</code>, <code>background-image</code>,… Quelques propriétés seront présentées en fonction des besoins du site.</p>
+<p>Si un même style doit être appliqué à plusieurs balises, il suffit de les séparer par des virgules :</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector">h1, h2
+</span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Cependant, on peut vouloir ne pas modifier le style pour toutes les entités correspondant à la balise h1 mais seulement à certaines.</p>
+<p>Pour cela, on place dans la balise correspondante l’attribut <strong>class</strong>.</p>
+<p>Par exemple pour que l’image de la bannière prenne tout l’espace, on ajoute l’attribut <code>class="banner"</code> dans la balise <code>&lt;img&gt;</code> de la zone header :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>banner<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>images/banner.jpg<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>banner<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bannière du site d<span class="token punctuation">'</span>informations musicales<span class="token punctuation">"</span></span><span class="token punctuation">/&gt;</span></span>
+</code></pre>
+<p>Dans le fichier CSS, il faut ajouter le code :</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector"><span class="token class">.banner</span>
+</span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>De même, on peut ajouter l’attribut <code>&lt;ul class="navigation"&gt;</code> à la liste <code>&lt;ul&gt;</code> de navigation et, dans le fichier CSS, pour obtenir une vraie barre de navigation, on écrira :</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector"><span class="token class">.navigation</span> </span><span class="token punctuation">{</span>
+  <span class="token property">list-style-type</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#333</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Pour associer un style à un élément contenu dans une balise, on écrit les noms des balises les uns à la suite des autres. Par exemple, si on veut que les liens ne soient plus soulignés dans le menu de navigation, on ajoutera dans le fichier CSS :</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector"><span class="token class">.navigation</span> li a </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+  <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">14</span>px <span class="token number">16</span>px<span class="token punctuation">;</span>
+  <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Si on veut appliquer un style à une zone ou un élément qui n’est pas associé à une balise, on peut utiliser les balises universelles <code>&lt;div&gt; &lt;/div&gt;</code> ou <code>&lt;span&gt; &lt;/span&gt;</code>. <code>&lt;span&gt;</code> s’utilise en ligne dans un paragraphe (comme <code>&lt;strong&gt;</code> par exemple), tandis que <code>&lt;div&gt;</code> s’utilise pour un bloc de données (comme <code>&lt;section&gt;</code> par exemple).</p>
+<p>On ajoute l’attribut <code>class</code> à ces balises pour y associer un style particulier.</p>
+<p>Exemple : on place le contenu de la balise <code>&lt;ul&gt; &lt;/ul&gt;</code> dans une balise <code>&lt;div&gt;</code> et on ajoute une classe nommée <em>articles</em> :</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>articles<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span> L'artiste 1 est de retour <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+      ...
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span>
+    ...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>Dans le fichier CSS, on ajoutera par exemple :</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector"><span class="token class">.articles</span> ul </span><span class="token punctuation">{</span>
+  <span class="token property">list-style-type</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">1</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.articles</span> li </span><span class="token punctuation">{</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">1</span>px solid <span class="token hexcode">#555</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.articles</span> li a </span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+  <span class="token property">text-decoration</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Il est également possible d’appliquer un style à un élément dont l’attribut vaut une valeur particulière.</p>
+<p>Par exemple, si l’attribut <code>title="mon titre"</code> est utilisé dans une balise <code>&lt;a&gt;</code> par exemple, on utilisera la commande CSS : <code>a[title="mon titre"] { ... }</code>.</p>
+<h3 id="gestion-des-textes">Gestion des textes</h3>
+<p>Avec du code CSS, on peut choisir le type de police utilisée, la taille, la disposition des textes, etc.</p>
+<p>La balise suivante permet de choisir la taille des polices et leur type pour tout le site par défaut (<code>/* */</code> est un commentaire) :</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector">html </span><span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span> <span class="token comment">/* px signifie 'pixels': la taille de base pour la police est désormais 10 pixels de haut */</span>
+  <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Open Sans'</span>, sans-serif<span class="token punctuation">;</span> <span class="token comment">/* la famille de police */</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>On peut aligner le texte à gauche (left), au milieu (center), à droite (right) en utilisant : <code>text-align: center;</code>.</p>
+<p>De même, on peut jouer sur l’espacement entre les caractères ou entre les lignes :</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token property">letter-spacing</span><span class="token punctuation">:</span> <span class="token number">1</span>px<span class="token punctuation">;</span>
+<span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">;</span>
+</code></pre>
+<p>La commande <code>text-decoration: none;</code> enlève la ligne sous une référence, mais on peut utiliser cette commande avec des arguments différents de <code>none</code>.</p>
+<p>Il existe de nombreuses possibilités du CSS qu’il n’est pas possible de résumer dans un article de découverte. Le site <a href="https://www.w3schools.com/css/default.asp">https://www.w3schools.com/css/default.asp</a> fournit de nombreux exemples et aides sur ce langage (ainsi que sur l’HTML).</p>
+<p>Par exemple, pour améliorer la barre de navigation, on peut s’aider des informations données sur ce site pour faire un effet de changement de couleur de la barre lorsque la souris passe sur un élément :</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector"><span class="token class">.navigation</span> li </span><span class="token punctuation">{</span>
+  <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.navigation</span> li a<span class="token pseudo-class">:hover</span> </span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#111</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Le site ainsi réalisé a le rendu suivant :</p>
+<hr>
+<p><em>Source : Eduscol, Progression 2019-2020</em></p>
+
+    </div>
+  </div>
+</body>
+
+</html>
